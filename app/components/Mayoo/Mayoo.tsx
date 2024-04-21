@@ -13,6 +13,7 @@ export default function Mayoo() {
   useEffect(() => {
     scrollToTop();
   }, []);
+
   return (
     <div className="max-w-screen-2xl w-full flexcolcenter gap-5 min-h-screen py-16">
       <h1 className="text-center font-semibold text-4xl sm:text-6xl md:text-7xl px-10 py-5 mt-5 bg-gradient-to-r from-slate-600 via-slate-50 to-slate-700 text-transparent bg-clip-text">
@@ -32,7 +33,7 @@ export default function Mayoo() {
         ></MayooShowCards>
         <MayooShowCards
           textTop="Auhentification through AWS Cognito and user-pools. Datas saved in AWS DynamoDB tables.
-       Api calls are made through an API gateway and serverless lambda functions."
+       Api calls are made through an API gateway and serverless Lambda functions."
           image="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/maooScreens/mayooauth-min.png"
         ></MayooShowCards>
         <MayooShowCards
@@ -41,6 +42,14 @@ export default function Mayoo() {
           image="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/maooScreens/spoon.png"
         ></MayooShowCards>
       </section>
+      <h1 className="text-center font-semibold text-4xl px-10 py-5 bg-gradient-to-r from-slate-600 via-slate-50 to-slate-700 text-transparent bg-clip-text">
+        What I'm using
+      </h1>
+      <p className="text-slate-200">
+        I'm using React Native for the front-end. <br /> For the backend it's
+        the AWS environment, through AWS Amplify (CLI). <br />
+        Includes Cognito for authentification, DynamoDB for data storage, Lambda for serverless functions, and an API gateway for Spoonacular communications.
+      </p>
       <h1 className="text-center font-semibold text-4xl px-10 py-5 bg-gradient-to-r from-slate-600 via-slate-50 to-slate-700 text-transparent bg-clip-text">
         Some more images
       </h1>

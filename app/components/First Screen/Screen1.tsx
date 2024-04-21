@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SelfyCard from "./SelfyCard";
 import ProjectCard from "./ProjectCard";
 import Caroussel from "./Caroussel/Caroussel";
@@ -19,28 +19,48 @@ export default function Screen1({ setScreenToLoad }: screen1Props) {
           <SelfyCard></SelfyCard>
         </div>
         <div className="w-full flexcolcenter gap-2 sm:max-w-96">
-          <div className="w-full cursor-pointer " onClick={()=>{setScreenToLoad("mayoo")}}>
+          <div
+            className="w-full cursor-pointer "
+            onClick={() => {
+              setScreenToLoad("mayoo");
+            }}
+          >
             <ProjectCard
               title="app creation"
               teaser="mayoo (android)"
               image="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/mayoo.png"
             ></ProjectCard>
           </div>
-          <div className="w-full cursor-pointer" onClick={()=>{setScreenToLoad("eromaps")}}>
+          <div
+            className="w-full cursor-pointer"
+            onClick={() => {
+              setScreenToLoad("eromaps");
+            }}
+          >
             <ProjectCard
               title="website creation"
               teaser="Eromaps.love"
               image="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/eroprofil-bg.png"
             ></ProjectCard>{" "}
           </div>
-          <div className="w-full cursor-pointer" onClick={()=>{setScreenToLoad("drawings")}}>
+          <div
+            className="w-full cursor-pointer"
+            onClick={() => {
+              setScreenToLoad("drawings");
+            }}
+          >
             <ProjectCard
               title="my art"
               teaser="some of my drawings"
               image="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/Sylk.png"
             ></ProjectCard>
           </div>
-          <div className="w-full cursor-pointer" onClick={()=>{setScreenToLoad("news")}}>
+          <div
+            className="w-full cursor-pointer"
+            onClick={() => {
+              setScreenToLoad("news");
+            }}
+          >
             <ProjectCard
               title="news"
               teaser="About me"

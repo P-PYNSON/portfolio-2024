@@ -1,14 +1,13 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import Screen1 from "./components/First Screen/Screen1";
 import Mayoo from "./components/Mayoo/Mayoo";
+import Menu from "./components/Shared/Menu";
 
 export default function Home() {
   const [screenToLoad, setScreenToLoad] = useState("screen1");
-  const [scrollDirection, setScrollDirection] = useState("up");
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  
+
   //scroll back to top on screen change
   function scrollToTop() {
     window.scrollTo({
@@ -21,26 +20,12 @@ export default function Home() {
   }, []);
 
   //function to hide of show menu depending on scrolling direction
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      setScrollDirection(prevScrollPos > currentScrollPos ? "up" : "down");
-      setPrevScrollPos(currentScrollPos);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [prevScrollPos]);
 
   return (
     <main className="flex w-full flex-col items-center justify-center bg-black px-5 relative">
       <div className="fixed w-full bg-gradient-to-b from-zinc-600 via-transparent to-transparent z-10 h-32 top-0 opacity-20 rounded-b-3xl"></div>
-      {scrollDirection == "up" && (
-        <div className="fixed top-5 bg-black px-10 py-4 rounded-xl shadow-md shadow-white/80 border-zinc-700 border text-zinc-200 font-bold z-20">
-          Menu
-        </div>
-      )}
+
+      <Menu setScreenToLoad={setScreenToLoad}></Menu>
       {screenToLoad == "screen1" && (
         <Screen1 setScreenToLoad={setScreenToLoad}></Screen1>
       )}
