@@ -1,10 +1,11 @@
 import React from "react";
 import SelfyCard from "./SelfyCard";
 import ProjectCard from "./ProjectCard";
+import Caroussel from "./Caroussel/Caroussel";
 
 export default function Screen1() {
   return (
-    <div className="max-w-screen-2xl  w-full flexcolcenter gap-2">
+    <div className="max-w-screen-2xl w-full flexcolcenter gap-2">
       <h1 className="font-extrabold text-4xl sm:text-6xl md:text-7xl p-10 bg-gradient-to-r from-slate-600 via-slate-50 to-slate-700 text-transparent bg-clip-text">
         YET <span className="font-normal italic">ANOTHER</span><br /> DEV PORTFOLIO
       </h1>
@@ -35,6 +36,7 @@ export default function Screen1() {
           ></ProjectCard>
         </div>
       </div>
+      <Caroussel></Caroussel>
     </div>
   );
 }
