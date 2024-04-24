@@ -1,10 +1,7 @@
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
-interface MenuProps {
-  setScreenToLoad: (screen: string) => void;
-}
-
-export default function Menu({ setScreenToLoad }: MenuProps) {
+export default function Menu() {
   const [scrollDirection, setScrollDirection] = useState("up");
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [open, setOpen] = useState(false);
@@ -47,36 +44,36 @@ export default function Menu({ setScreenToLoad }: MenuProps) {
           Menu
           {open && (
             <div ref={menuRef} className="w-full flexcolcenter mt-2 gap-4 p-4">
-              <button
-                onClick={() => setScreenToLoad("screen1")}
+              <Link
+                href="/"
                 className="w-full rounded-xl p-4 border-y border-white hover:shadow-md hover:shadow-white"
               >
                 Home
-              </button>
-              <button
-                onClick={() => setScreenToLoad("mayoo")}
+              </Link>
+              <Link
+                href="/Mayoo"
                 className="w-full rounded-xl p-4 border-y border-white hover:shadow-md hover:shadow-white"
               >
                 Mayoo
-              </button>
-              <button
-                onClick={() => setScreenToLoad("eromaps")}
+              </Link>
+              <Link
+                href="/Eromaps"
                 className="w-full rounded-xl p-4 border-y border-white hover:shadow-md hover:shadow-white"
               >
                 Eromaps
-              </button>
-              <button
-                onClick={() => setScreenToLoad("drawings")}
+              </Link>
+              <Link
+                href="/Drawings"
                 className="w-full rounded-xl p-4 border-y border-white hover:shadow-md hover:shadow-white"
               >
                 Drawings
-              </button>
-              <button
-                onClick={() => setScreenToLoad("news")}
+              </Link>
+              <Link
+                href="/News"
                 className="w-full rounded-xl p-4 border-y border-white hover:shadow-md hover:shadow-white"
               >
                 About
-              </button>
+              </Link>
             </div>
           )}
         </div>

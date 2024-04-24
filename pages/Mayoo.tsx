@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
-import MayooShowCards from "./MayooShowCards";
-import ImageCaroussel from "../Shared/ImageCaroussel";
+import React, { ReactElement, useEffect } from "react";
+import MayooShowCards from "../app/components/Mayoo/MayooShowCards";
+import ImageCaroussel from "../app/components/Shared/ImageCaroussel";
+import Layout from "./layout";
+import { NextPageWithLayout } from "./_app";
 
-export default function Mayoo() {
+const Mayoo: NextPageWithLayout = () => {
   //scroll back to top on screen change
   function scrollToTop() {
     window.scrollTo({
@@ -46,9 +48,11 @@ export default function Mayoo() {
         What I&apos;m using
       </h1>
       <p className="text-slate-200">
-        I&apos;m using React Native for the front-end. <br /> For the backend it&apos;s
-        the AWS environment, through AWS Amplify (CLI). <br />
-        Includes Cognito for authentification, DynamoDB for data storage, Lambda for serverless functions, and an API gateway for Spoonacular communications.
+        I&apos;m using React Native for the front-end. <br /> For the backend
+        it&apos;s the AWS environment, through AWS Amplify (CLI). <br />
+        Includes Cognito for authentification, DynamoDB for data storage, Lambda
+        for serverless functions, and an API gateway for Spoonacular
+        communications.
       </p>
       <h1 className="text-center font-semibold text-4xl px-10 py-5 bg-gradient-to-r from-slate-600 via-slate-50 to-slate-700 text-transparent bg-clip-text">
         Some more images
@@ -66,4 +70,10 @@ export default function Mayoo() {
       </div>
     </div>
   );
-}
+};
+
+Mayoo.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+
+export default Mayoo;

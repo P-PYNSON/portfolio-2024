@@ -1,8 +1,10 @@
-import React from "react";
-import EromapsCard from "./EromapsCard";
-import ImageCaroussel from "../Shared/ImageCaroussel";
+import React, { ReactElement } from "react";
+import EromapsCard from "../app/components/Eromaps/EromapsCard";
+import ImageCaroussel from "../app/components/Shared/ImageCaroussel";
+import Layout from "./layout";
+import { NextPageWithLayout } from "./_app";
 
-export default function Eromaps() {
+const Eromaps: NextPageWithLayout = () => {
   return (
     <div className="max-w-screen-2xl w-full flexcolcenter min-h-screen py-16 gap-5">
       <h1 className="text-center text-wrap font-semibold text-4xl sm:text-6xl md:text-7xl px-10 py-5 mt-5 bg-gradient-to-r from-slate-600 via-slate-50 to-slate-700 text-transparent bg-clip-text">
@@ -88,4 +90,10 @@ export default function Eromaps() {
       </div>
     </div>
   );
-}
+};
+
+Eromaps.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+
+export default Eromaps;

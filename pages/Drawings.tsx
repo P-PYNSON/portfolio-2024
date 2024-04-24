@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
-import ImagesLoader from "./ImagesLoader";
-import ImageCaroussel from "../Shared/ImageCaroussel";
+"use client";
+import ImagesLoader from "@/app/components/Drawings/ImagesLoader";
+import ImageCaroussel from "@/app/components/Shared/ImageCaroussel";
+import React, { ReactElement, useEffect, useState } from "react";
+import Layout from "./layout";
+import { NextPageWithLayout } from "./_app";
 
-export default function Drawings() {
+const Drawings: NextPageWithLayout = () => {
   const drawingArray = [
     "https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/Drawings/Azyra+side.jpeg",
     "https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/Drawings/Azyra+color.jpeg",
@@ -44,56 +47,64 @@ export default function Drawings() {
   }, []);
 
   return (
-    <div className="max-w-screen-2xl w-full flexcolcenter gap-2 min-h-screen py-16">
-      <h1 className="text-center font-semibold text-4xl sm:text-6xl md:text-7xl px-10 py-5 mt-5 bg-gradient-to-r from-slate-600 via-slate-50 to-slate-700 text-transparent bg-clip-text">
-        DRAWINGS
-      </h1>
-      <p className="text-slate-200 max-w-screen-lg">
-        I&apos;ve always been quite shy about my artworks. I don&apos;t draw a lot these
-        days either. But I&apos;ve been told I should put them here, so why not.
-        Constructive criticism is welcome, keeping in mind this is merely a
-        hobby.
-      </p>
-      {width >= 830 && (
-        <div className="flexcolcenter">
-          <section className="sm:flex sm:flex-row sm:flex-wrap sm:justify-center gap-5 mt-5">
-            {drawingArray.slice(0, 6).map((drawing, index) => (
-              <ImagesLoader key={index} image={drawing}></ImagesLoader>
-            ))}
-          </section>
-          {showmore && (
+  
+      <div className="max-w-screen-2xl w-full flexcolcenter gap-2 min-h-screen py-16">
+        <h1 className="text-center font-semibold text-4xl sm:text-6xl md:text-7xl px-10 py-5 mt-5 bg-gradient-to-r from-slate-600 via-slate-50 to-slate-700 text-transparent bg-clip-text">
+          DRAWINGS
+        </h1>
+        <p className="text-slate-200 max-w-screen-lg">
+          I&apos;ve always been quite shy about my artworks. I don&apos;t draw a
+          lot these days either. But I&apos;ve been told I should put them here,
+          so why not. Constructive criticism is welcome, keeping in mind this is
+          merely a hobby.
+        </p>
+        {width >= 830 && (
+          <div className="flexcolcenter">
             <section className="sm:flex sm:flex-row sm:flex-wrap sm:justify-center gap-5 mt-5">
-              {drawingArray.slice(6).map((drawing, index) => (
+              {drawingArray.slice(0, 6).map((drawing, index) => (
                 <ImagesLoader key={index} image={drawing}></ImagesLoader>
               ))}
             </section>
-          )}
-          {!showmore && (
-            <button
-              onClick={() => {
-                setShowmore(true);
-              }}
-              className="text-white font-bold rounded-xl mt-10 w-1/2 bg-gradient-to-b from-zinc-700 to-transparent h-12"
-            >
-              SHOW MORE
-            </button>
-          )}
+            {showmore && (
+              <section className="sm:flex sm:flex-row sm:flex-wrap sm:justify-center gap-5 mt-5">
+                {drawingArray.slice(6).map((drawing, index) => (
+                  <ImagesLoader key={index} image={drawing}></ImagesLoader>
+                ))}
+              </section>
+            )}
+            {!showmore && (
+              <button
+                onClick={() => {
+                  setShowmore(true);
+                }}
+                className="text-white font-bold rounded-xl mt-10 w-1/2 bg-gradient-to-b from-zinc-700 to-transparent h-12"
+              >
+                SHOW MORE
+              </button>
+            )}
+          </div>
+        )}
+        {width < 830 && (
+          <section className="sm:flex sm:flex-row sm:flex-wrap sm:justify-center mt-5">
+            <ImageCaroussel imageArray={drawingArray}></ImageCaroussel>
+          </section>
+        )}
+        <div className="mt-10">
+          <video controls width="640" height="360">
+            <source
+              src="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/Drawings/AzyraVideo.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
         </div>
-      )}
-      {width < 830 && (
-        <section className="sm:flex sm:flex-row sm:flex-wrap sm:justify-center mt-5">
-          <ImageCaroussel imageArray={drawingArray}></ImageCaroussel>
-        </section>
-      )}
-      <div className="mt-10">
-        <video controls width="640" height="360">
-          <source
-            src="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/Drawings/AzyraVideo.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
       </div>
-    </div>
+   
   );
 }
+
+Drawings.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+
+export default Drawings;

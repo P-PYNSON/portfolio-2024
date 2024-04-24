@@ -1,8 +1,10 @@
-import React from "react";
-import NewsCard from "./NewsCard";
-import Links from "./Links";
+import React, { ReactElement } from "react";
+import NewsCard from "../app/components/News/NewsCard";
+import Links from "../app/components/News/Links";
+import { NextPageWithLayout } from "./_app";
+import Layout from "./layout";
 
-export default function News() {
+const About: NextPageWithLayout = () => {
   return (
     <div className="max-w-screen-2xl w-full flexcolcenter gap-2 min-h-screen py-16">
       <h1 className="text-center font-semibold text-4xl sm:text-6xl md:text-7xl px-10 py-5 mt-5 bg-gradient-to-r from-slate-600 via-slate-50 to-slate-700 text-transparent bg-clip-text">
@@ -37,4 +39,10 @@ export default function News() {
       </section>
     </div>
   );
-}
+};
+
+About.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+
+export default About;
