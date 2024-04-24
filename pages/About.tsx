@@ -33,7 +33,7 @@ const About: NextPageWithLayout = () => {
           image="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/About/toulouse.jpg"
         ></NewsCard>
         <NewsCard
-          text=" The two demons hauting my life everyday..."
+          text=" The two demons haunting my life everyday..."
           image="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/About/KaliVels.jpg"
         ></NewsCard>
       </section>
