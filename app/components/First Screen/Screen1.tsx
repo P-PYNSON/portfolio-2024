@@ -47,9 +47,9 @@ export default function Screen1() {
           </Link>
         </div>
       </div>
-      <div className="relative w-full mt-8 sm:max-w-screen-lg">
+    {/*   <div className="relative w-full mt-8 sm:max-w-screen-lg">
         <Caroussel></Caroussel>
-      </div>
+      </div> */}
     </div>
   );
 }

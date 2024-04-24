@@ -2,11 +2,11 @@ import React from "react";
 
 export default function SelfyCard() {
   return (
-    <div className="bg-gradient-to-t from-zinc-950 to-zinc-700 py-5 sm:px-10 px-8 rounded-xl flexcolcenter gap-5 max-w-96 h-[480px]">
+    <div className="bg-gradient-to-t from-transparent to-zinc-700 py-5 sm:px-10 px-8 rounded-xl flexcolcenter gap-5 max-w-96 h-[480px]">
       <div className="w-60 h-60">
         <img
           className="rounded-xl w-full h-full object-contain shadow-lg shadow-white/80"
-          src="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/me1-min.jpg"
+          src="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/Photo+identite.jpg"
           alt=""
         />
       </div>
