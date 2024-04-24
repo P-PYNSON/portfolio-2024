@@ -49,8 +49,8 @@ export default function Drawings() {
         DRAWINGS
       </h1>
       <p className="text-slate-200 max-w-screen-lg">
-        I've always been quite shy about my artworks. I don't draw a lot these
-        days either. But I've been told I should put them here, so why not.
+        I&apos;ve always been quite shy about my artworks. I don&apos;t draw a lot these
+        days either. But I&apos;ve been told I should put them here, so why not.
         Constructive criticism is welcome, keeping in mind this is merely a
         hobby.
       </p>

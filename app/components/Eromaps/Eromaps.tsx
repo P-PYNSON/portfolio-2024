@@ -50,11 +50,11 @@ export default function Eromaps() {
         ></EromapsCard>
       </section>
       <h1 className="text-center font-semibold text-4xl px-10 py-5 bg-gradient-to-r from-slate-600 via-slate-50 to-slate-700 text-transparent bg-clip-text">
-        What I'm using
+        What I&apos;m using
       </h1>
       <p className="text-slate-200">
-        I'm using Laravel with Inertia. The back-end is in PHP, following
-        Laravel's MVC structure. <br />
+        I&apos;m using Laravel with Inertia. The back-end is in PHP, following
+        Laravel&apos;s MVC structure. <br />
         The front-end is using React (thanks to Inertia). <br />
         PostgreSQL for the database, with Eloquent ORM. <br />
         Hosted on DigitalOcean servers.

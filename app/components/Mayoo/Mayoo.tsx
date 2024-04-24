@@ -43,10 +43,10 @@ export default function Mayoo() {
         ></MayooShowCards>
       </section>
       <h1 className="text-center font-semibold text-4xl px-10 py-5 bg-gradient-to-r from-slate-600 via-slate-50 to-slate-700 text-transparent bg-clip-text">
-        What I'm using
+        What I&apos;m using
       </h1>
       <p className="text-slate-200">
-        I'm using React Native for the front-end. <br /> For the backend it's
+        I&apos;m using React Native for the front-end. <br /> For the backend it&apos;s
         the AWS environment, through AWS Amplify (CLI). <br />
         Includes Cognito for authentification, DynamoDB for data storage, Lambda for serverless functions, and an API gateway for Spoonacular communications.
       </p>
