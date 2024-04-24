@@ -69,7 +69,7 @@ export default function Menu() {
                 Drawings
               </Link>
               <Link
-                href="/News"
+                href="/About"
                 className="w-full rounded-xl p-4 border-y border-white hover:shadow-md hover:shadow-white"
               >
                 About
