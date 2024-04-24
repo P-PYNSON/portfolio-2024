@@ -7,6 +7,9 @@ interface MayooShowCardsProps {
 }
 
 export default function MayooShowCards({textTop, textBottom, image}:MayooShowCardsProps) {
+  const splitImage = image.split("/");
+  const imageAlt = splitImage[splitImage.length - 1]
+  
   return (
     <section className='sm:w-96'>
         <p className="text-slate-200 text-center">
@@ -16,7 +19,7 @@ export default function MayooShowCards({textTop, textBottom, image}:MayooShowCar
           <img
             className="rounded-2xl w-auto h-auto max-h-full max-w-full "
             src={image}
-            alt=""
+            alt={imageAlt}
           />
         </div>
         <p className="text-slate-200 text-center mt-5">

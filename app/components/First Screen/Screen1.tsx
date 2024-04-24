@@ -8,6 +8,7 @@ interface screen1Props {
 }
 
 export default function Screen1({ setScreenToLoad }: screen1Props) {
+  
   return (
     <div className="max-w-screen-2xl w-full flexcolcenter gap-2 min-h-screen py-16">
       <h1 className="font-extrabold text-4xl sm:text-6xl md:text-7xl p-10 bg-gradient-to-r from-slate-600 via-slate-50 to-slate-700 text-transparent bg-clip-text">

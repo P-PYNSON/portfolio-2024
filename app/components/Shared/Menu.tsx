@@ -66,13 +66,13 @@ export default function Menu({ setScreenToLoad }: MenuProps) {
                 Eromaps
               </button>
               <button
-                onClick={() => setScreenToLoad("eromaps")}
+                onClick={() => setScreenToLoad("drawings")}
                 className="w-full rounded-xl p-4 border-y border-white hover:shadow-md hover:shadow-white"
               >
                 Drawings
               </button>
               <button
-                onClick={() => setScreenToLoad("eromaps")}
+                onClick={() => setScreenToLoad("news")}
                 className="w-full rounded-xl p-4 border-y border-white hover:shadow-md hover:shadow-white"
               >
                 About

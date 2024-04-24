@@ -4,9 +4,12 @@ import { useState } from "react";
 import Screen1 from "./components/First Screen/Screen1";
 import Mayoo from "./components/Mayoo/Mayoo";
 import Menu from "./components/Shared/Menu";
+import Eromaps from "./components/Eromaps/Eromaps";
+import Drawings from "./components/Drawings/Drawings";
+import News from "./components/News/News";
 
 export default function Home() {
-  const [screenToLoad, setScreenToLoad] = useState("screen1");
+  const [screenToLoad, setScreenToLoad] = useState("drawings");
 
   //scroll back to top on screen change
   function scrollToTop() {
@@ -30,6 +33,9 @@ export default function Home() {
         <Screen1 setScreenToLoad={setScreenToLoad}></Screen1>
       )}
       {screenToLoad == "mayoo" && <Mayoo></Mayoo>}
+      {screenToLoad == "eromaps" && <Eromaps></Eromaps>}
+      {screenToLoad == "drawings" && <Drawings></Drawings>}
+      {screenToLoad == "news" && <News></News>}
     </main>
   );
 }

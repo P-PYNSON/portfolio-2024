@@ -22,9 +22,9 @@ export default function ImageCaroussel({ imageArray }: ImageCarousselProps) {
   }
 
   return (
-    <div className="flex items-center justify-center max-w-96 sm:w-96 h-96">
-      <button onClick={() => previousImage()}>
-        <Image className="w-20" src={letfArrow} alt="Left Arrow" />
+    <div className="flex items-center justify-center gap-1 h-72 sm:h-96">
+      <button className="h-3/4 w-12 sm:w-24 bg-gradient-to-l from-zinc-700 to-transparent" onClick={() => previousImage()}>
+      {/*   <Image className="w-full" src={letfArrow} alt="Left Arrow" /> */}
       </button>
       <div className=" w-full h-full">
         <a
@@ -40,9 +40,7 @@ export default function ImageCaroussel({ imageArray }: ImageCarousselProps) {
           />
         </a>
       </div>
-      <button onClick={() => nextImage()}>
-        {" "}
-        <Image className="w-20" src={rightArrow} alt="Left Arrow" />
+      <button className="h-3/4 w-12 sm:w-24 bg-gradient-to-r from-zinc-700 to-transparent" onClick={() => nextImage()}>
       </button>
     </div>
   );
