@@ -62,7 +62,7 @@ const Eromaps: NextPageWithLayout = () => {
         Hosted on DigitalOcean servers.
       </p>
 
-      <div className="flex gap-5 mt-5">
+      <div className="flexcolcenter md:flex-row gap-5 mt-5">
         <a
           href="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/EromapsScreens/results3-min.png"
           target="_blank"
