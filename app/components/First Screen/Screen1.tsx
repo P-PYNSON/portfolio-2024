@@ -63,8 +63,8 @@ export default function Screen1({ setScreenToLoad }: screen1Props) {
             }}
           >
             <ProjectCard
-              title="news"
-              teaser="About me"
+              title="About me"
+              teaser="More infos"
               image="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/news.jpg"
             ></ProjectCard>
           </div>

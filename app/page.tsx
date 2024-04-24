@@ -9,7 +9,7 @@ import Drawings from "./components/Drawings/Drawings";
 import News from "./components/News/News";
 
 export default function Home() {
-  const [screenToLoad, setScreenToLoad] = useState("drawings");
+  const [screenToLoad, setScreenToLoad] = useState("screen1");
 
   //scroll back to top on screen change
   function scrollToTop() {
@@ -22,7 +22,6 @@ export default function Home() {
     scrollToTop();
   }, []);
 
-  //function to hide of show menu depending on scrolling direction
 
   return (
     <main className="flex w-full flex-col items-center justify-center bg-black px-5 relative">
