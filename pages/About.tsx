@@ -23,7 +23,7 @@ const About: NextPageWithLayout = () => {
 
       <section className="sm:flex sm:flex-row sm:flex-wrap sm:justify-center  gap-5 mt-5">
         <NewsCard
-          text=" Found an awesome school for 2024, starting in September ! Now I just
+          text="I found an awesome school for 2024, starting in September ! Now I just
         need to find an apprenticeship !"
           image="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/About/3-31921_clip-art-pictures.png"
         ></NewsCard>
