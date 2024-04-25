@@ -17,7 +17,7 @@ export default function SelfyCard() {
           <p className="slateGradient text-2xl font-semibold ">Fullstack Dev</p>
         </div>
         <p className="text-center text-lg">
-          Looking for internship near Toulouse
+          Looking for apprenticeship near Toulouse
         </p>
       </div>
     </div>
