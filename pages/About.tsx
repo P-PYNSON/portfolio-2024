@@ -15,7 +15,7 @@ const About: NextPageWithLayout = () => {
 
       <a
         className="bg-zinc-600 text-slate-200 p-6 mt-5 rounded-xl w-64 text-center font-bold underline"
-        href="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/About/CV+PYNSON+Philippe+(1).pdf"
+        href="https://portfoliophilpynson.s3.eu-north-1.amazonaws.com/CV+PYNSON+Philippe+2025.pdf"
         download="cv_Pynson_Philippe.pdf"
       >
         Download my CV
